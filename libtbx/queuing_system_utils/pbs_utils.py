@@ -58,7 +58,7 @@ def qstat_parse():
   from libtbx import easy_run
   from xml.dom import minidom
   qstat_out = easy_run.fully_buffered(
-    command="qstat -x").raise_if_errors().stdout_lines
+    command="qstat").raise_if_errors().stdout_lines
   result = []
   if (len(qstat_out) == 0):
     return result
